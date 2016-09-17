@@ -1,0 +1,2517 @@
+2016-09-18 00:08:08,374 [Dummy-1:5200] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-09-18 00:08:08,376 [Dummy-1:5200] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-09-18 00:08:11,715 [Thread-2:6844] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'blog/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:08:11,719 [Thread-2:6844] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'blog/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
+2016-09-18 00:08:18,505 [Thread-3:5240] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'blog'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:08:18,508 [Thread-3:5240] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'blog'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
+2016-09-18 00:08:19,594 [Thread-4:6420] [django.db.backends:89] [utils:execute] [DEBUG]- (0.002) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:08:19,640 [Thread-5:6232] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'ad/201609/1-1.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:08:19,643 [Thread-6:6628] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'ad/201609/1-2.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:08:19,652 [Thread-7:1236] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'ad/201609/1-3.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:08:19,653 [Thread-5:6232] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'ad/201609/1-1.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
+2016-09-18 00:08:19,659 [Thread-8:6496] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'ad/201609/1-4.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:08:19,660 [Thread-6:6628] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'ad/201609/1-2.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
+2016-09-18 00:08:19,664 [Thread-7:1236] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'ad/201609/1-3.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
+2016-09-18 00:08:19,676 [Thread-8:6496] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'ad/201609/1-4.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
+2016-09-18 00:08:19,679 [Thread-10:5964] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:08:19,692 [Thread-9:4032] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:08:19,695 [Thread-10:5964] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
+2016-09-18 00:08:19,698 [Thread-9:4032] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
+2016-09-18 00:08:42,707 [Dummy-1:3096] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-09-18 00:08:42,709 [Dummy-1:3096] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-09-18 00:10:25,270 [Dummy-1:5652] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-09-18 00:10:25,272 [Dummy-1:5652] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-09-18 00:10:30,591 [Thread-2:6740] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:10:30,694 [Thread-19:5864] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'ad/201609/1-1.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:10:30,699 [Thread-20:6420] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'ad/201609/1-2.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:10:30,706 [Thread-21:6424] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'ad/201609/1-3.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:10:30,713 [Thread-22:4436] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'ad/201609/1-4.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:10:30,822 [Thread-35:6868] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/yzm.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:10:30,860 [Thread-36:3496] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/15.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:11:13,913 [Dummy-1:6420] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-09-18 00:11:13,916 [Dummy-1:6420] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-09-18 00:11:31,406 [Thread-2:6156] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:11:31,482 [Thread-20:6960] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'ad/201609/1-2.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:11:31,488 [Thread-19:1884] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'ad/201609/1-1.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:11:31,492 [Thread-21:6996] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'ad/201609/1-3.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:11:31,498 [Thread-22:6232] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'ad/201609/1-4.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:11:31,579 [Thread-35:4736] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:11:31,599 [Thread-36:4552] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:12:26,862 [Dummy-1:4768] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-09-18 00:12:26,866 [Dummy-1:4768] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-09-18 00:12:40,835 [Dummy-1:7016] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-09-18 00:12:40,838 [Dummy-1:7016] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-09-18 00:12:55,250 [Dummy-1:6576] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-09-18 00:12:55,253 [Dummy-1:6576] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-09-18 00:12:55,434 [Thread-2:1884] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:12:55,514 [Thread-19:2984] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'ad/201609/1-1.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:12:55,522 [Thread-20:6168] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'ad/201609/1-2.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:12:55,527 [Thread-21:3108] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'ad/201609/1-3.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:12:55,531 [Thread-22:6364] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'ad/201609/1-4.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:12:55,610 [Thread-35:4072] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/yzm.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:12:55,616 [Thread-36:5040] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/15.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:13:47,259 [Thread-47:6436] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:13:47,476 [Thread-77:6136] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/yzm.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:13:47,481 [Thread-78:6116] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/15.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:13:53,359 [Thread-86:4216] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:13:53,519 [Thread-119:5920] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/yzm.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:13:53,525 [Thread-120:4224] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/15.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:14:02,793 [Thread-125:3360] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:14:02,947 [Thread-158:5964] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/yzm.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:14:02,968 [Thread-159:4644] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/15.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:14:04,854 [Thread-164:6696] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:14:05,078 [Thread-197:6616] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/yzm.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:14:05,085 [Thread-198:1952] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/15.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:14:25,170 [Thread-203:5100] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:14:25,325 [Thread-236:6232] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/yzm.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:14:25,331 [Thread-237:6168] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/15.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:14:26,800 [Dummy-1:5100] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-09-18 00:14:26,803 [Dummy-1:5100] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-09-18 00:15:37,254 [Thread-3:2776] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:15:37,377 [Thread-33:516] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:15:37,384 [Thread-34:6764] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:15:38,804 [Thread-42:6212] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:15:38,844 [Thread-43:5404] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:15:38,855 [Thread-44:6188] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:15:40,465 [Thread-45:3976] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:15:40,499 [Thread-47:5572] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:15:40,503 [Thread-46:6584] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:15:41,179 [Thread-48:6876] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 00:15:41,308 [Thread-81:1864] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 00:15:41,318 [Thread-82:6852] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 01:50:28,192 [Thread-87:5052] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 01:50:28,375 [Thread-120:7636] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 01:50:28,385 [Thread-121:7712] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 01:50:29,208 [Thread-126:7736] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 01:50:29,424 [Thread-159:5964] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 01:50:29,428 [Thread-160:7996] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 01:51:31,569 [Thread-165:7932] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 01:51:31,847 [Thread-198:5724] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 01:51:31,865 [Thread-199:6828] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 01:51:33,972 [Dummy-1:7612] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-09-18 01:51:33,974 [Dummy-1:7612] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-09-18 01:51:34,805 [Thread-2:6824] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) SELECT "common_ads"."id", "common_ads"."title", "common_ads"."description", "common_ads"."image_url", "common_ads"."callback_url", "common_ads"."play", "common_ads"."index" FROM "common_ads" WHERE "common_ads"."play" = 1 ORDER BY "common_ads"."index" ASC, "common_ads"."id" ASC; args=(True,)
+2016-09-18 01:51:34,976 [Thread-35:7504] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/yzm.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 01:51:34,979 [Thread-36:5052] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/15.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 02:03:11,758 [Thread-71:6516] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/yzm.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 02:03:11,764 [Thread-72:7200] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'test/15.jpg', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^>, <RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 02:03:13,644 [Dummy-1:8040] [django.db.backends:89] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-09-18 02:03:13,647 [Dummy-1:8040] [django.db.backends:89] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-09-18 02:03:15,014 [Thread-33:7044] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 02:03:15,015 [Thread-32:6804] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 02:03:15,021 [Thread-33:7044] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
+2016-09-18 02:03:15,023 [Thread-32:6804] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
+2016-09-18 02:03:18,119 [Thread-65:7148] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 02:03:18,125 [Thread-66:8100] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-09-18 02:03:18,128 [Thread-65:7148] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/yzm.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
+2016-09-18 02:03:18,129 [Thread-66:8100] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'common.urls' from 'D:\\Users\\linky\\Desktop\\maizi-project\\maizi_website\\maizi\\common\\urls.py'> (None:maizi) ^$>]], 'path': 'test/15.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\django-1.9.9-py3.4.egg\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'common.urls' from 'D:\\\\Users\\\\linky\\\\Desktop\\\\maizi-project\\\\maizi_website\\\\maizi\\\\common\\\\urls.py'> (None:maizi) ^$>"
