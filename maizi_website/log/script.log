@@ -42,3 +42,11 @@
 2016-09-18 00:15:40,495 [Thread-46:6584] [django.request:182] [base:get_response] [WARNING]- Not Found: /test/15.jpg
 2016-09-18 00:15:41,301 [Thread-81:1864] [django.request:182] [base:get_response] [WARNING]- Not Found: /test/yzm.jpg
 2016-09-18 00:15:41,302 [Thread-82:6852] [django.request:182] [base:get_response] [WARNING]- Not Found: /test/15.jpg
+2016-09-18 01:50:28,370 [Thread-120:7636] [django.request:182] [base:get_response] [WARNING]- Not Found: /test/yzm.jpg
+2016-09-18 01:50:28,377 [Thread-121:7712] [django.request:182] [base:get_response] [WARNING]- Not Found: /test/15.jpg
+2016-09-18 01:50:29,414 [Thread-159:5964] [django.request:182] [base:get_response] [WARNING]- Not Found: /test/yzm.jpg
+2016-09-18 01:50:29,417 [Thread-160:7996] [django.request:182] [base:get_response] [WARNING]- Not Found: /test/15.jpg
+2016-09-18 01:51:31,843 [Thread-198:5724] [django.request:182] [base:get_response] [WARNING]- Not Found: /test/yzm.jpg
+2016-09-18 01:51:31,859 [Thread-199:6828] [django.request:182] [base:get_response] [WARNING]- Not Found: /test/15.jpg
+2016-09-18 01:51:34,964 [Thread-35:7504] [django.request:182] [base:get_response] [WARNING]- Not Found: /test/yzm.jpg
+2016-09-18 01:51:34,968 [Thread-36:5052] [django.request:182] [base:get_response] [WARNING]- Not Found: /test/15.jpg
