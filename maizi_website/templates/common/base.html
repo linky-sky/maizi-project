@@ -44,19 +44,16 @@
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
             <i class="v5-icon v5-icon-search"></i>
-            <input type="text" class="form-control" id="search" placeholder="搜索你感兴趣的课程">
+            <input type="text" class="form-control" id="search" placeholder="搜索你感兴趣的课程" name="search"  >
           </div>
           <div class="search-dp" id="hotkeyword">
           	<!--推荐关键词-->
             <div class="hotkeyword">
               <h4>推荐搜索关键词</h4>
               <ul class="cf">
-                <li><a href="">Python</a></li>
-                <li><a href="">平面设计</a></li>
-                <li><a href="">PHP</a></li>
-                <li><a href="">Android</a></li>
-                <li><a href="">IOS</a></li>
-                <li><a href="">Web前端</a></li>
+                {% for rsk in rsks %}
+                <li><a href="http://www.baidu.com">{{ rsk }}</a></li>
+                {% endfor %}
               </ul>
             </div>
           </div>
@@ -75,13 +72,13 @@
             <a href="" class="dt-usermsg"><i class="v5-icon v5-icon-havemsg"></i><em>3</em></a>
           </div>
         </div>
-      </div>
+      </div> 
       <!--搜索结果-->
       <div class="search-dp" id="keyword-group">        
         <div class="keyword-group scroll-pane">
           <dl>
             <dt>职业课程</dt>
-            <dd class="cf">
+            <dd class="cf" id='autocomplete1'>
               <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
               <a href="" style="background-color:#5184CF;">Android架构设计师</a>
               <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
@@ -89,7 +86,7 @@
           </dl>
           <dl>
             <dt>其他课程</dt>
-            <dd class="cf">
+            <dd class="cf" id='autocomplete2'>
               <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
               <a href="" style="background-color:#5184CF;">Android架构设计师</a>
               <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
@@ -98,16 +95,6 @@
               <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
               <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
               <a href="" style="background-color:#5184CF;">Android架构设计师</a>
-              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
-              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
-              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
-              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
-              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
-              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
-              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
-              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
-              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
-              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
             </dd>
           </dl>
         </div>
@@ -196,13 +183,13 @@
             <div class="tab-pane active" id="register-email">
             	<div class="form-group"><input type="text" class="form-control" placeholder="请输入邮箱账号"></div>
               <div class="form-group"><input type="password" class="form-control" placeholder="请输入密码"></div>
-              <div class="form-group cf"><input type="text" class="form-control form-control-captcha fl" placeholder="请输入验证码"><span class="v5-yzm fr"><a href=""><img src="test/yzm.jpg">换一张</a></span></div>            	
+              <div class="form-group cf"><input type="text" class="form-control form-control-captcha fl" placeholder="请输入验证码"><span class="v5-yzm fr"><a href=""><img src="{% static 'test/yzm.jpg' %}">换一张</a></span></div>            	
             </div>
             <div class="tab-pane" id="register-mobile">
             	<div class="form-group cf"><input type="text" class="form-control form-control-phone fl" placeholder="请输入手机号"><span class="fr"><button type="button" class="btn btn-micv5 btn-send">发送验证码</button></span></div>
               <div class="form-group"><input type="text" class="form-control" placeholder="请输入短信验证码"></div>
               <div class="form-group"><input type="password" class="form-control" placeholder="请输入密码"></div>
-              <div class="form-group cf"><input type="text" class="form-control form-control-captcha fl" placeholder="请输入验证码"><span class="v5-yzm fr"><a href=""><img src="test/yzm.jpg">换一张</a></span></div>
+              <div class="form-group cf"><input type="text" class="form-control form-control-captcha fl" placeholder="请输入验证码"><span class="v5-yzm fr"><a href=""><img src="{% static 'test/yzm.jpg' %}">换一张</a></span></div>
             </div>
           </div>
           <p class="good-tips">已经有账号？<a href="#" data-toggle="modal" data-target="#loginModal" id="btnLogin">立即登录</a></p>
@@ -220,7 +207,7 @@
 <div class="show-card animated hidden">
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td class="td-userhd"><span class="user-pic"><img src="test/15.jpg"></span></td>
+      <td class="td-userhd"><span class="user-pic"><img src="{% static 'test/15.jpg' %}"></span></td>
       <td align="right" class="text-align-r">
         <a href="" class="link-default">184545848</a>
         <div class="user-email">184545848@mail.com</div>
@@ -250,7 +237,8 @@
   </div>
 </div>
 
-<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<!-- <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script> -->
+<script type="text/javascript" src="{% static 'js/jquery-1.12.4.js' %}"></script>
 <script src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
 <script src="{% static 'js/jquery.featureCarousel.min.js' %}"></script>
 <script src="{% static 'js/jquery.carouFredSel.js' %}"></script>
@@ -260,6 +248,49 @@
 <script src="{% static 'js/jquery.jscrollpane.min.js' %}"></script>
 <script src="{% static 'js/microoh-v5.js' %}"></script>
 <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+
+<script type="text/javascript">
+  var timeoutid = null; 
+  var ajax_request = function(){
+    $.ajax({
+      'url':'/seo/',
+      'data':{'search':$('#search').val()},
+      'dataType':'json',
+      'type':'POST',
+      'success':function(data){
+        if(data.length == 0){
+          $('#keyword-group').slideUp();
+        }
+        else if(data.length) {
+          $('#autocomplete1').empty(); 
+          $('#autocomplete2').empty(); 
+          json_str = JSON.stringify(data)
+          json_data = JSON.parse(json_str)
+          $('#keyword-group').slideDown();
+          for (var i in json_data) {
+            if(json_data[i].oc){
+            for (var n in json_data[i].oc) {
+              var item = json_data[i].oc[n];
+               $('<a href="" style="background-color:#5DB836;"></a>').text(item.name).attr('href',item.url).appendTo($('#autocomplete1'))
+            }}
+            else{
+              for (var n in json_data[i].vc) {
+              var item = json_data[i].vc[n];
+               $('<a href="" style="background-color:#5DB836;"></a>').text(item.name).attr('href',item.url).appendTo($('#autocomplete2'))
+             }}
+           }}
+        }
+    });
+  };
+  $('#search') 
+  .keyup(function(event) { 
+    if(event.keyCode > 40 || event.keyCode == 8 || event.keyCode ==32) { 
+      clearTimeout(timeoutid); 
+      timeoutid = setTimeout(ajax_request,100);  
+    }
+  }); 
+</script>
+
 <script type="text/javascript">
 $(function() {
 	//大图切换
