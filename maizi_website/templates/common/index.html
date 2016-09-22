@@ -32,11 +32,11 @@
           </ul>
           <div class="tabs-container tab-content">
             <div class="v5-course-item tab-pane fade in active" id="new" data-holder="holdernew">
-              <div class="page-item">
+              <div class="page-item" id="page-item">
                 <ul class="row course-list-index">
-                  {% for oc_publish in oc_publishs_contacts %}
+                {% for oc_publish in oc_publishs_contacts %}
                   <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                    <a href="">
+                    <a href="{%  url 'maizi:course_kc' oc_publish.id %}" target="_blank" >
                       <dl>
                         <dt>
                           <div><img src="/uploads/{{ oc_publish.image }}"></div>
@@ -55,25 +55,25 @@
                 <div class="row v5-pages">
                   <div class="col-sm-12 v5-pages-list">
                     <ul class="row fr">
-            <!--           {% if oc_publishs_contacts.has_previous %}
+                {% if oc_publishs_contacts.has_previous %}
                       <li><a href="?page={{ oc_publishs_contacts.previous_page_number }}" class="v5-icon v5-icon-prev"></a></li>
-                      {% endif %}
-                      {% if oc_publishs_contacts.number %}
+                {% endif %}
+                {% if oc_publishs_contacts.number %}
                       <li><a href="" class="page-num active">1</a></li>
                       <li><a href="" class="page-num">{{ oc_publishs_contacts.paginator.num_pages }}</a></li>
-                      {% else %}
+                {% else %}
                       <li><a href="" class="page-num active">1</a>{{ oc_publishs_contacts.number }}</li>
-                      {% endif %}
-                      {% if oc_publishs_contacts.has_next %}
+                {% endif %}
+                {% if oc_publishs_contacts.has_next %}
                       <li><a href="?page={{ oc_publishs_contacts.next_page_number }}" class="v5-icon v5-icon-next"></a></li>
-                      {% endif %} -->
-                      <li><a href="" class="v5-icon v5-icon-prev"></a></li>
+                {% endif %}
+                     <!--  <li><a href="" class="v5-icon v5-icon-prev"></a></li>
                       <li><a href="" class="page-num active">1</a></li>
                       <li><a href="" class="page-num">2</a></li>
                       <li><a href="" class="page-num">3</a></li>
                       <li><a href="" class="page-num">4</a></li>
                       <li><a href="" class="page-num">5</a></li>
-                      <li><a href="" class="v5-icon v5-icon-next"></a></li>
+                      <li><a href="" class="v5-icon v5-icon-next"></a></li> -->
                     </ul>
                   </div>
                 </div>
@@ -84,7 +84,7 @@
                 <ul class="row course-list-index">
                   {% for oc_click in oc_clicks_contacts %}
                   <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                    <a href="">
+                    <a href="{% url 'maizi:course_kc' oc_click.id %}">
                       <dl>
                         <dt>
                           <div><img src="/uploads/{{ oc_click.image }}"></div>
@@ -103,13 +103,25 @@
                 <div class="row v5-pages">
                   <div class="col-sm-12 v5-pages-list">
                     <ul class="row fr">
-                      <li><a href="" class="v5-icon v5-icon-prev"></a></li>
+                      {% if oc_clicks_contacts.has_previous %}
+                      <li><a href="?page={{ oc_clicks_contacts.previous_page_number }}" class="v5-icon v5-icon-prev"></a></li>
+                      {% endif %}
+                      {% if oc_clicks_contacts.number %}
+                      <li><a href="" class="page-num active">1</a></li>
+                      <li><a href="" class="page-num">{{ oc_clicks_contacts.paginator.num_pages }}</a></li>
+                      {% else %}
+                      <li><a href="" class="page-num active">1</a>{{ oc_clicks_contacts.number }}</li>
+                      {% endif %}
+                      {% if oc_clicks_contacts.has_next %}
+                      <li><a href="?page={{ oc_clicks_contacts.next_page_number }}" class="v5-icon v5-icon-next"></a></li>
+                      {% endif %}
+                 <!--      <li><a href="" class="v5-icon v5-icon-prev"></a></li>
                       <li><a href="" class="page-num active">1</a></li>
                       <li><a href="" class="page-num">2</a></li>
                       <li><a href="" class="page-num">3</a></li>
                       <li><a href="" class="page-num">4</a></li>
                       <li><a href="" class="page-num">5</a></li>
-                      <li><a href="" class="v5-icon v5-icon-next"></a></li>
+                      <li><a href="" class="v5-icon v5-icon-next"></a></li> -->
                     </ul>
                   </div>
                 </div>
@@ -118,10 +130,10 @@
             <div class="v5-course-item tab-pane fade" id="hot" data-holder="holderhot">
               <div class="page-item">
                 <ul class="row course-list-index">
-                  {% for oc_student in oc_students_contacts %}
+                {% for oc_student in oc_clicks_contacts %}
                   <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                    <a href="">
-                      <dl>
+                    <a href="{%  url 'maizi:course_kc' oc_student.id %}">
+                    <dl>
                         <dt>
                           <div><img src="/uploads/{{ oc_student.image}}"></div>
                         </dt>
@@ -162,48 +174,23 @@
     </div>
     <div class="container">
       <div class="tc-list">
-        <a id="prev" class="prev" href="#"></a>
+        <a id="prev" class="prev" href=""></a>
         <div class="tc-list-w">
           <ul id="foo" class="cf">
+            {% for userprofile in  userprofiles %}
             <li>
               <dl>
-                <dt><a href="" style="border-left-color:#00A388;"><img src="{% static 'test/2.png' %}"></a></dt>
+                <dt><a href="{% url 'maizi:teacher' userprofile.id %}" target="_blank" style="border-left-color:#00A388;"><img src="/uploads/{{ userprofile.avatar_url }}"></a></dt>
                 <dd>
-                  <h2>杨丰盛</h2>
-                  <h3>安卓框架联盟总架构师</h3>
+                  <h2>{{ userprofile.username }}</h2>
+                  <h3>{{ userprofile.position }}</h3>
                 </dd>
               </dl>
             </li>
-            <li>
-              <dl>
-                <dt><a href="" style="border-left-color:#FF6038;"><img src="{% static 'test/17.jpg' %}"></a></dt>
-                <dd>
-                  <h2>杨丰盛</h2>
-                  <h3>安卓框架联盟总架构师</h3>
-                </dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt><a href="" style="border-left-color:#00A388;"><img src="{% static 'test/2.png' %}"></a></dt>
-                <dd>
-                  <h2>杨丰盛</h2>
-                  <h3>安卓框架联盟总架构师</h3>
-                </dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt><a href="" style="border-left-color:#78BD8B;"><img src="{% static 'test/2.png' %}"></a></dt>
-                <dd>
-                  <h2>杨丰盛</h2>
-                  <h3>安卓框架联盟总架构师</h3>
-                </dd>
-              </dl>
-            </li>
+            {% endfor %}
           </ul>
         </div>
-        <a id="next" class="next" href="#"></a>
+        <a id="next" class="next" href=""></a>
       </div>
     </div>
     <div class="v5-titline">
@@ -215,39 +202,33 @@
       <div class="v5-read cf">
         <div class="v5-read-item">
           <div class="v5-read-list" style="background-color:#00A388;">
-            <h1>麦子百科</h1>
+            <h1>技术干货</h1>
             <ul>
-              <li><a href="" title="发现创新价值的科技媒体">发现创新价值的科技媒体</a></li>
-              <li><a href="" title="iOS 和 Android 之争可以终结了">iOS 和 Android 之争可以终结了</a></li>
-              <li><a href="" title="加码云计算市场，惠普近 1 亿收购云软件公司">加码云计算市场，惠普近 1 亿收购云软件公司</a></li>
-              <li><a href="" title="HTC 智能手表：传并未放弃，正努力改进">HTC 智能手表：传并未放弃，正努力改进</a></li>
-              <li><a href="" title="第一次！首批 Android app 上架 Chrome ">第一次！首批 Android app 上架 Chrome</a></li>
+              {% for article in articles %}
+              <li><a href="{{ article.id }}" title="{{ article.title }}">{{ article.title }}</a></li>
+              {% endfor %}
             </ul>
           </div>
-          <p><img src="{% static 'test/3.jpg' %}"></p>
+          <p><img src="{% static 'test/172102nyz5xmaql75q53lq.jpg' %}"></p>
         </div>
         <div class="v5-read-item v5-read-item-mid">
           <p><img src="{% static 'test/4.jpg' %}"></p>
-          <div class="v5-read-list" style="background-color:#FF6138;">
+          <div class="v5-read-list" style="background-color:#00A388;">
             <h1>麦子百科</h1>
             <ul>
-              <li><a href="" title="发现创新价值的科技媒体">发现创新价值的科技媒体</a></li>
-              <li><a href="" title="iOS 和 Android 之争可以终结了">iOS 和 Android 之争可以终结了</a></li>
-              <li><a href="" title="加码云计算市场，惠普近 1 亿收购云软件公司">加码云计算市场，惠普近 1 亿收购云软件公司</a></li>
-              <li><a href="" title="HTC 智能手表：传并未放弃，正努力改进">HTC 智能手表：传并未放弃，正努力改进</a></li>
-              <li><a href="" title="第一次！首批 Android app 上架 Chrome ">第一次！首批 Android app 上架 Chrome</a></li>
+              {% for article in articles %}
+              <li><a href="{{ article.id }}" title="{{ article.title }}">{{ article.title }}</a></li>
+              {% endfor %}
             </ul>
           </div>
         </div>
         <div class="v5-read-item">
           <div class="v5-read-list" style="background-color:#00A388;">
-            <h1>麦子百科</h1>
+            <h1>行业资讯</h1>
             <ul>
-              <li><a href="" title="发现创新价值的科技媒体">发现创新价值的科技媒体</a></li>
-              <li><a href="" title="iOS 和 Android 之争可以终结了">iOS 和 Android 之争可以终结了</a></li>
-              <li><a href="" title="加码云计算市场，惠普近 1 亿收购云软件公司">加码云计算市场，惠普近 1 亿收购云软件公司</a></li>
-              <li><a href="" title="HTC 智能手表：传并未放弃，正努力改进">HTC 智能手表：传并未放弃，正努力改进</a></li>
-              <li><a href="" title="第一次！首批 Android app 上架 Chrome ">第一次！首批 Android app 上架 Chrome</a></li>
+              {% for article in articles %}
+              <li><a href="{{ article.id }}" title="{{ article.title }}">{{ article.title }}</a></li>
+              {% endfor %}
             </ul>
           </div>
           <p><img src="{% static 'test/5.jpg' %}"></p>
@@ -262,18 +243,11 @@
     <div class="container">
       <div class="v5-strategic">
         <ul class="cf">
+        {% for strategiccooperation in strategiccooperations %}
           <li>
-            <a href=""><img src="{% static 'test/6.png' %}"></a>
+            <a href="{{ strategiccooperation.callback_url }}" target="_blank"><img src="/uploads/{{ strategiccooperation.image_url }}"></a>
           </li>
-          <li>
-            <a href=""><img src="{% static 'test/7.png' %}"></a>
-          </li>
-          <li>
-            <a href=""><img src="{% static 'test/9.png' %}"></a>
-          </li>
-          <li>
-            <a href=""><img src="{% static 'test/10.png' %}"></a>
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
@@ -289,36 +263,10 @@
             <dd>
               <ul>
                 <li class="cf">
-                  <a href="">网易云课堂</a><span>|</span>
-                  <a href="">腾讯课堂</a><span>|</span>
-                  <a href="">微信营销</a><span>|</span>
-                  <a href="">文档转换网</a><span>|</span>
-                  <a href="">浪曦IT视频</a><span>|</span>
-                  <a href="">自主学习网</a><span>|</span>
-                  <a href="">网易云课堂</a><span>|</span>
-                  <a href="">腾讯课堂</a><span>|</span>
-                  <a href="">微信营销</a><span>|</span>
-                  <a href="">浪曦IT视频</a><span>|</span>
-                  <a href="">自主学习网</a><span>|</span>
-                  <a href="">网易云课堂</a><span>|</span>
-                  <a href="">腾讯课堂</a><span>|</span>
-                  <a href="">微信营销</a><span>|</span>
-                </li>
-                <li class="cf">
-                  <a href="">网易云课堂</a><span>|</span>
-                  <a href="">腾讯课堂</a><span>|</span>
-                  <a href="">微信营销</a><span>|</span>
-                  <a href="">文档转换网</a><span>|</span>
-                  <a href="">浪曦IT视频</a><span>|</span>
-                  <a href="">自主学习网</a><span>|</span>
-                  <a href="">网易云课堂</a><span>|</span>
-                  <a href="">腾讯课堂</a><span>|</span>
-                  <a href="">微信营销</a><span>|</span>
-                  <a href="">浪曦IT视频</a><span>|</span>
-                  <a href="">自主学习网</a><span>|</span>
-                  <a href="">网易云课堂</a><span>|</span>
-                  <a href="">腾讯课堂</a><span>|</span>
-                  <a href="">微信营销</a><span>|</span>
+                {% for friendshiplink in friendshiplinks %}
+                <a target="_blank" href="{{ friendshiplink.callback_url }}" title="{{ friendshiplink.name }}">{{ friendshiplink.name }}</a>
+                <span>|</span>
+                {% endfor %}
                 </li>
               </ul>
             </dd>
@@ -327,9 +275,9 @@
             <dt>关注我们</dt>
             <dd>
               <ul>
-                <li><a href=""><span class="sina"></span>新浪微博</a></li>
-                <li><a href=""><span class="weixin"></span>官方微信</a></li>
-                <li><a href=""><span class="qq"></span>腾讯微博</a></li>
+                {% for payattention in payattentions %}
+                <li><a href="{{ payattention.callback_url }}"><span class="{{ payattention.class_name }}"></span>{{ payattention.name }}</a></li>
+                {% endfor %}
               </ul>
             </dd>
           </dl>
@@ -346,7 +294,7 @@
           </dl>
         </div>
         <div class="v5-footer-bottom">
-          <p>© 2012-2014 maiziedu.com | 服务条款 | 蜀ICP备13014270号-4 Version 4.0.1 release20140721.1</p>
+          <p>© 2012-2016 www.maiziedu.com | 服务条款 | 蜀ICP备13014270号-4 Version 5.0.0 release20160127</p>
         </div>
       </div>
     </div>

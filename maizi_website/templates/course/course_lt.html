@@ -1,0 +1,84 @@
+{% extends 'common/base.html' %}
+{% load staticfiles %}
+{% block custom_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/searchResult.css' %}">
+{% endblock %}
+
+{% block container %}
+   <input type="hidden" value="course" class="search_app">
+    <div class="center search_result">
+        <div class="search_result_left search_result_job_left">
+            <div class="navMenu font14"><a href="http://www.maiziedu.com/search/course/Python-1/" class="skill active">职业技能</a>|<a href="http://www.maiziedu.com/search/wiki/Python-1/" class="wiki">技能WIKI</a>|<a href="http://www.maiziedu.com/search/article/Python-1/" class="article">文章干货</a></div>
+                <ul class="list">
+                {% for oc in oc_lts %}
+                <li>
+                    <a href="{% url 'maizi:course_kc' oc.id %}" target="_blank" class="img"><img src="/uploads/{{ oc.image }}" alt="django基础"></a>
+                            
+                    <div class="txt">
+                    <h3><a href="{% url 'maizi:course_kc' oc.id %}"target="_blank">{{ oc.name }}</a></h3>
+                    <p>{{ oc.description }}</p>
+                    <dl>
+                    <dt>
+                    {% for kw in oc.search_keywords.all %}<a href="http://www.maiziedu.com/course/python/" target="_blank">{{ kw.name }}</a>
+                    {% endfor %}</dt>
+                    <dd><span class="chapter">{{ oc.lesson_set.all.count }}章节</span>|<span class="num">{{ oc.student_count }}人正在学习</span></dd>
+                    </dl>
+                    </div>
+                </li>
+                {% endfor %}
+                </ul>
+            <div style="" class="zypage yahei marginB38">
+        <div class="zypage_div" style="-moz-user-select: none;">
+        
+        {% if oc_lts.has_previous %}
+        <a class="jp-current" href="?page={{ oc_lts.previous_page_number }}">上一页</a>
+        {% endif %}
+        {% if oc_lts.number %}
+        <a href="" class="page-num">{{ oc_lts.number }}/{{ oc_lts.paginator.num_pages }}</a>
+        {% endif %}
+        {% if oc_lts.has_next %}
+        <a href="?page={{ oc_lts.next_page_number }}">下一页</a>
+        {% endif %}
+
+
+    </div>
+</div>
+</div>
+        
+<div class="search_result_right">
+    <div class="course">
+        <h2>职业课程</h2>
+        <ul>
+        {% for vc in Vc_lt %}
+            <li class="active"><a href="{% url 'maizi:course_zy' vc.seo_keyword  %}" target="_blank">
+                <strong>{{ vc.name }}</strong>
+                <p><img src="/uploads/{{ vc.image }}" alt="UI设计"></p>
+            </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="skill">
+        <h2>热门技能</h2>
+        <div class="menu">
+            <a href="http://www.maiziedu.com/course/ios/" target="_blank">iOS开发入门</a>
+            <a href="http://www.maiziedu.com/course/android/" target="_blank">Android开发</a>
+            <a href="http://www.maiziedu.com/course/ui/" target="_blank">UI设计</a>
+            <a href="http://www.maiziedu.com/course/pm/" target="_blank">产品经理</a>
+            <a href="http://www.maiziedu.com/course/qrsqd/" target="_blank">嵌入式开发</a>
+            <a href="http://www.maiziedu.com/course/iot/" target="_blank">物联网</a>
+            <a href="http://www.maiziedu.com/course/gd/" target="_blank">平面设计</a>
+            <a href="http://www.maiziedu.com/course/python/" target="_blank">Python</a>
+            <a href="http://www.maiziedu.com/course/te/" target="_blank">软件测试</a>
+            <a href="http://www.maiziedu.com/course/php/" target="_blank">PHP网站开发</a>
+            <a href="http://www.maiziedu.com/course/web/" target="_blank">Web前端</a>
+            <a href="http://www.maiziedu.com/course/op/" target="_blank">网络运营</a>
+            <a href="http://www.maiziedu.com/course/oam/" target="_blank">云计算</a>
+            <a href="http://www.maiziedu.com/course/oam/" target="_blank">自动化运维</a>
+        </div>
+    </div>
+</div>
+        
+    </div>
+{% endblock %}
+

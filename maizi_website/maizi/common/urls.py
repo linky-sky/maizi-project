@@ -21,6 +21,14 @@ from common.upload  import upload_image
 urlpatterns = [
     url(r'^$',views.index,name='index'),
     url(r'^seo/',views.seo,name='seo'),
+    url(r'^do_reg/',views.do_reg,name='do_reg'),
+    url(r'^do_logout/',views.do_logout,name='do_logout'),
+    url(r'^do_login/',views.do_login,name='do_login'),
+    url(r'^search/course/(?P<id>.+)/',views.course_lt,name='course_lt'),
+    url(r'^common/teacher/(?P<id>[1-9]+)/',views.teacher,name='teacher'),
+    url(r'^course/(?P<id>[1-9]+)/',views.course_kc,name='course_kc'),
+    url(r'^course/(?P<id>[A-Za-z]+)/',views.course_zy,name='course_zy'),
+    url(r'^users/student/(?P<id>[1-9]+)/',views.geren_student,name='grs'),
     url(r'^uploads/(?P<path>.*)$','django.views.static.serve',{"document_root":settings.MEDIA_ROOT,}),
     url(r'^admin/upload/(?P<dir_name>[^/]+)$', upload_image, name='upload_image'),
 ]

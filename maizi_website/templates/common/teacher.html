@@ -1,0 +1,44 @@
+{% extends "common/base.html" %}
+{% load staticfiles %}
+
+
+
+{% block container %}
+<div class="vteacher-banner-big">
+    <div class="container">
+      <div class="carousel-container">
+        <div id="carousels">
+          <div class="carousel-teacher">
+          <div class='teacher-img'>
+            <span><img class="" alt="Image Caption" src="/uploads/{{ teacher.avatar_middle_thumbnall }}"></span>
+            </div>
+            <div class='teacher-jx'>
+            <ol>
+            <li style="font-size:40px"><strong>{{ teacher.username }}</strong></li>
+            <li><span>{{ teacher.position }}</span></li>
+            <br>
+            <li><p>{{ teacher.description }}</p></li>
+            <br>
+            <li><a href="http://www.maiziedu.com/course/qrs-px/" target="_blank">报名TA的课程</a></li>
+            </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<ul id='foo'></ul>
+<ul><li>带班人数</li><li>累计毕业人数</li><li>就业率</li></ul>
+<div class="v5-titline"></div>
+<div>
+<h3>讲师经历</h3>
+</div>
+<div>
+    <div>
+    </div>
+    <div>
+        <h1>讲师寄语</h1>
+        <p><h3>师者，传道受业解惑也。IT行业是个日星月异的行业，经验丰富的讲师不仅会教会学生技术，还会带你全面认识这个行业。我们会根据学生的特点制定更加符合他们自身的学习计划。我们可以更加多元化的和学生沟通，把我们的经验和知识分享给他们。在未来因材施教是完全可以被实现的。而我们就是实现这个想法的人</h3></p>
+    </div>
+</div>
+{% endblock %}

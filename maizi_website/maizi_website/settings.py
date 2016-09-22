@@ -141,7 +141,7 @@ STATICFILES_DIRS = (
 
 
 #自定义用户model
-#AUTH_USER_MODEL = 'blog.User'
+AUTH_USER_MODEL = 'common.UserProfile'
 
 
 #网站信息基本配置
