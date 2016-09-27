@@ -1,33 +1,53 @@
 {% extends 'common/base.html' %}
 {% load staticfiles %}
 
+{% block title %}{{ TITLE }}{% endblock %}
+{% block keywords%}{{ KEYWORDS}}{% endblock %}
+{% block description%}{{ DESCRIPTION }}{% endblock %}
 {% block custom_css %}
-<link href="{% static 'css/courseIntroduce.css' %}" rel="stylesheet">
+<link href="{% static 'css/zy.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block custom_script %}
+
 {% endblock %}
 
 {% block container %}
-
-<div class="section_1" style="background: url(/uploads/course/2016/09/1.5Python.jpg) center no-repeat;background-size: cover;">
-    <div class="inner">
-        <p class="title">企业直通班课程</p>
-        <h1>Python Web开发</h1>
-        <p class="desc">系统介绍“爬虫”程序及Web后端开发技术的课程，所学技能可教你完美搭建搜索引擎</p>
-        <div class="row_1">
-            <p>离开课还有</p>
-            <div class="time-item" cutdown="450834">
-                <span id="day_show">5天</span><span id="hour_show">5时</span><span id="minute_show">13分</span><span id="second_show">02秒</span>
+<div class="vteacher-banner-big">
+    <div class="container">
+      <div class="carousel-container">
+        <div id="carousels">
+          <div class="carousel-teacher">
+            <div class='teacher-jx'>
+            <ol>
+            <li style="font-size:40px"><strong>{{ vocationalcourse.name }}</strong></li>
+            <br>
+            <li><p>{{ vocationalcourse.description }}</p></li>
+            <br>
+            <br>
+            <div class="row_2">
+            {% if request.user.is_authenticated %}
+              {% if vo %}
+               <strong><span>你已报名，正在学习中...</span></strong>
+              {% else %}
+              <button><a class="try_learn" href="">免费试学</a></button>
+              <button><a class="just_up" href="{% url 'maizi:baoming' vocationalcourse.id %}">立即报名</a></button>
+              {% endif %}
+            {% else %}
+            <button><a class="try_learn" href="">免费试学</a></button>
+             <button><a class="just_up" href="" data-toggle="modal" data-target="#loginModal">立即报名</a></button>
+             {% endif %}
             </div>
+            </ol>
+            </div>
+          </div>
         </div>
-        <div class="row_2">
-            <a class="try_learn" href="http://www.maiziedu.com/lps3f/python/syllabus/">免费试学</a>
-            <a class="just_up" href="javascript:void(0)" data-toggle="modal" data-target="#loginModal">立即报名</a>
-        </div>
+      </div>
     </div>
 </div>
+<div>
 
+</div>
 <ul id='foo'></ul>
 {% endblock %}
 

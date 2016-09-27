@@ -242,8 +242,8 @@ class UserProfile(AbstractBaseUser,PermissionsMixin):
 	用户
 	"""
 	username = models.CharField(max_length=30,verbose_name='昵称',unique=True)
-	first_name = models.CharField(max_length=30,verbose_name='名字',blank=True)
-	last_name = models.CharField(max_length=30,verbose_name='姓氏',blank=True)
+	first_name = models.CharField(max_length=30,verbose_name='姓氏',blank=True)
+	last_name = models.CharField(max_length=30,verbose_name='名字',blank=True)
 	email = models.EmailField(verbose_name='email',unique=True,null=True,blank=True)
 	is_staff = models.BooleanField(default=False,help_text='是否可以登录到后台管理站点',verbose_name='职员状态')
 	is_active = models.BooleanField(default=True,help_text='指明用户是否被认为活跃的。以反选代替删除帐号',verbose_name='有效状态')
@@ -324,3 +324,58 @@ class LessonResource(models.Model):
 
 	def __unicode__(self):
 		return self.name
+
+class MyCourse(models.Model):
+	'''
+	我的课程
+	'''
+	user = models.ForeignKey(UserProfile, related_name='mc_user', verbose_name='用户')
+	course = models.CharField(max_length=10,verbose_name='课程ID')
+	# course = models.ForeignKey(VocationalCourses,verbose_name='课程')
+	course_type = models.SmallIntegerField(choices=((1, '其他'), (2, '职业课程'),),verbose_name='课程类型')
+	index = models.IntegerField(default=999,verbose_name='课程显示顺序(从小到大)')
+	date_add = models.DateTimeField(auto_now_add=True,verbose_name='添加时间')
+
+	class Meta:
+		verbose_name = '我的课程'
+		verbose_name_plural = verbose_name
+
+	def __str__(self):
+		return str(self.id)
+
+
+class MyFavorite(models.Model):
+	'''
+	我的收藏
+	'''
+	user = models.ForeignKey(UserProfile, related_name='mf_user', verbose_name='用户')
+	course = models.ForeignKey(OtherCourses, verbose_name='课程')
+	date_favorite = models.DateTimeField(auto_now_add=True,verbose_name='收藏时间')
+
+	class Meta:
+		verbose_name = '我的收藏'
+		verbose_name_plural = verbose_name
+		unique_together = (('user', 'course'),)
+
+	def __str__(self):
+		return str(self.id)
+		
+class Discuss(models.Model):
+	'''
+	章节讨论
+	'''
+	content = models.TextField(verbose_name='讨论内容')
+	parent_id = models.IntegerField(blank=True, null=True,verbose_name='父讨论ID')
+	date_publish = models.DateTimeField(auto_now_add = True,verbose_name='发布时间')
+	lesson = models.ForeignKey(Lesson, verbose_name='章节')
+	user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='用户')
+
+	class Meta:
+		verbose_name = '课程讨论'
+		verbose_name_plural = verbose_name
+
+	def __str__(self):
+		return str(self.id)
+
+
+

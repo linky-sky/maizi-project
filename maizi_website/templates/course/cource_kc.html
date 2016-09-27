@@ -1,6 +1,9 @@
 {% extends 'common/base.html' %}
 {% load staticfiles %}
 {% load maizi_filter %}
+{% block title %}{{ TITLE }}{% endblock %}
+{% block keywords%}{{ KEYWORDS}}{% endblock %}
+{% block description%}{{ DESCRIPTION }}{% endblock %}
 {% block custom_css %}
 <!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> -->
 <link href="{% static 'css/lessonVideoList.css' %}" rel="stylesheet">
@@ -26,7 +29,7 @@
         <p class="color66 font14 marginB10 p2">{{ othercourse.description }}</p>
         <p class="lv_tag marginB20"></p>
         <p class="color66 font14 lv_tag2 marginB20"><span><i class="VLCico icolist"></i>{{ othercourse.lesson_set.all.count }} 章节</span>|<span><i class="VLCico icopeople"></i>{{ othercourse.click_count }}次播放</span></p>
-        <p class="lv_btn"><a href="http://www.maiziedu.com/course/891-13138/" class="a1 font14">查看课程视频</a>
+        <p class="lv_btn"><a href="{% url 'maizi:play' othercourse.id zjid %}" class="a1 font14">查看课程视频</a>
     </p></div>
 </div>
 <div class="video-lists-container marginB40">
@@ -45,7 +48,7 @@
                 {% if othercourse.lesson_set.all %}
                 <ul class="lesson-lists">
                     {% for othercours in othercourse.lesson_set.all %}
-                    <li><a href="{{ othercours.video_url }}" target="_blank" class="font14 color66"><span class="fl">{{ othercours.name }}</span><span class="fr color99">{{ othercours.video_length|time }}</span></a></li>
+                    <li><a href="{% url  'maizi:play' othercourse.id othercours.id %}" target="_blank" class="font14 color66"><span class="fl">{{ othercours.name }}</span><span class="fr color99">{{ othercours.video_length|time }}</span></a></li>
                     {% endfor %}
                 </ul>
                 {% else %}
