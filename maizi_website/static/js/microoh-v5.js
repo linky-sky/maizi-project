@@ -54,30 +54,31 @@ $(function(){
 
   //创建班级
   
-  //search
+  // search
   $('#search').on({
     click: function(event) {
       event.stopPropagation();
     },
     focus: function() {
       if($(this).val() == '') {
+        //搜索框为空搜索关键词下拉出来
         $('#hotkeyword').slideDown();
       }
     },
     keyup:function() {
       $('#hotkeyword').slideUp();
-      $('#keyword-group').slideDown();
+      // $('#keyword-group').slideDown();
     }
   })
   $('.search-dp').click(function(event) {
     event.stopPropagation();
   });
-  $('#hotkeyword a').click(function(event) {
-    event.preventDefault();
-    $('#search').val($(this).text());
-    $('#hotkeyword').slideUp();
-    $('#keyword-group').slideDown();
-  });
+  // $('#hotkeyword a').click(function(event) {
+  //   event.preventDefault();
+  //   $('#search').val($(this).text());
+  //   $('#hotkeyword').slideUp();
+  //   $('#keyword-group').slideDown();
+  // });
 
 
   //点击收藏
@@ -86,8 +87,8 @@ $(function(){
     var _thisI = $(this).children('i');
     var _thisIclass = _thisI.hasClass('v5-icon-saved');
     _thisI.toggleClass('v5-icon-saved');
-    var _text = (_thisIclass == true) ? '收藏' : '已收藏';
-    $(this).children('span').text(_text);
+    // var _text = (_thisIclass == true) ? '收藏' : '已收藏';
+    // $(this).children('span').text(_text);
   });
   
   $('.plan-tip').hover(function() {
@@ -151,4 +152,3 @@ function v5_popover_tpl(tpl_class,elem,popover_container,popover_placement,popov
     html: true
   });
 }
-

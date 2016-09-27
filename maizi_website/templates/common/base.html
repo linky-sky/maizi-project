@@ -13,6 +13,7 @@
 <link href="{% static 'css/microoh-v5.css' %}" rel="stylesheet">
 <link href="{% static 'css/animate.css' %}" rel="stylesheet">
 <link href="{% static 'css/develop.css' %}" rel="stylesheet">
+
 {% block custom_css %}{% endblock %}
 <!--[if lt IE 9]>
 <script src="{% static 'js/html5shiv.min.js' %}"></script>
@@ -33,81 +34,63 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="" title="麦子学院"><img src="{% static 'images/logo.png' %}"><img src="{% static 'images/logo-font.png' %}"></a>
+        <a class="navbar-brand" href="/" title="麦子学院"><img src="{% static 'images/logo.png' %}"><img src="{% static 'images/logo-font.png' %}"></a>
       </div>
       <div class="collapse navbar-collapse" id="microoh-navbar-collapse">
         <ul class="nav navbar-nav navbar-left">
-          <li><a href="">职业课程</a></li>
+          <li><a href="" class='zykc'>职业课程</a></li>
           <li><a href="">论坛</a></li>
           <li><a href="">移动APP</a></li>
         </ul>
-        <form class="navbar-form navbar-left" role="search">
+        <form action="" class="navbar-form navbar-left" role="search" id="seo_search" autocomplete="off" method="post">
+        {% csrf_token %}
           <div class="form-group">
             <i class="v5-icon v5-icon-search"></i>
-            <input type="text" class="form-control" id="search" placeholder="搜索你感兴趣的课程">
+            <input type="text" class="form-control" id="search" placeholder="搜索你感兴趣的课程" name="search"  required="required" value="">
+            <input  type="hidden" id="seo_button">
           </div>
           <div class="search-dp" id="hotkeyword">
           	<!--推荐关键词-->
             <div class="hotkeyword">
               <h4>推荐搜索关键词</h4>
               <ul class="cf">
-                <li><a href="">Python</a></li>
-                <li><a href="">平面设计</a></li>
-                <li><a href="">PHP</a></li>
-                <li><a href="">Android</a></li>
-                <li><a href="">IOS</a></li>
-                <li><a href="">Web前端</a></li>
+                {% for rsk in rsks %}
+                <li><a href="{% url 'maizi:course_lt' rsk %}">{{ rsk }}</a></li>
+                {% endfor %}
               </ul>
             </div>
           </div>
         </form>
         <div class="v5-topbar-login">
-          <div class="v5-topbar-login-off" style="display:none;">
-            <a href="#" data-toggle="modal" data-target="#loginModal">登录</a>
+          {% if request.user.is_authenticated %}
+          <div class="v5-topbar-login-off" style="display:block;">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="" class="dt-username"><span>您好 {{ request.user.username }} </span><i class="v5-icon v5-icon-rd"></i></a></li>
+            <li><a href="" class="dt-usermsg"><i class="v5-icon v5-icon-havemsg"></i><em></em></a></li>
+            <li><a href="{% url 'maizi:do_logout' %}" ><span>退出</span></a></li>
+          </ul>
           </div>
-          <div class="v5-topbar-login-on cf">
-            <dl>
-              <dt>
-                <a href="" class="dt-username"><span>184545848</span><i class="v5-icon v5-icon-rd"></i></a>
-              </dt>
-            </dl>
-            <!--<a href="" class="dt-usermsg"><i class="v5-icon v5-icon-nomsg"></i></a>-->
-            <a href="" class="dt-usermsg"><i class="v5-icon v5-icon-havemsg"></i><em>3</em></a>
+          {% else %}
+          <div class="v5-topbar-login-off" style="display:block;">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="" data-toggle="modal" data-target="#registerModal">注册</a></li>
+            <li><a href="" data-toggle="modal" data-target="#loginModal">登录</a></li>
+          </ul>
           </div>
+          {% endif %}
         </div>
-      </div>
+      </div> 
       <!--搜索结果-->
       <div class="search-dp" id="keyword-group">        
         <div class="keyword-group scroll-pane">
           <dl>
             <dt>职业课程</dt>
-            <dd class="cf">
-              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
-              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
-              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
+            <dd class="cf" id='autocomplete1'>
             </dd>
           </dl>
           <dl>
             <dt>其他课程</dt>
-            <dd class="cf">
-              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
-              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
-              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
-              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
-              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
-              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
-              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
-              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
-              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
-              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
-              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
-              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
-              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
-              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
-              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
-              <a href="" style="background-color:#A8C310;">Android应用开发工程</a>
-              <a href="" style="background-color:#5184CF;">Android架构设计师</a>
-              <a href="" style="background-color:#5DB836;">Android的层嵌入式工</a>
+            <dd class="cf" id='autocomplete2'>
             </dd>
           </dl>
         </div>
@@ -122,7 +105,7 @@
            <div class="container">
                <div class="v5-footer-container">
                    <div class="v5-footer-bottom">
-                       <p>© 2012-2015 <a href="http://www.maiziedu.com">www.maiziedu.com</a> | 服务条款 | 蜀ICP备13014270号-4 Version 4.0.6 release20150115.1</p>
+                       <p>© 2012-2016 www.maiziedu.com | 服务条款 | 蜀ICP备13014270号-4 Version 5.0.0 release20160127</p>
                    </div>
                </div>
            </div>
@@ -141,15 +124,20 @@
       </div>
       <div class="modal-body">
         <section class="box-login v5-input-txt" id="box-login">
+        <form id="formlog" action="{% url 'maizi:index' %}" method="post" >
+        {% csrf_token %}
           <ul>
-            <li class="form-group has-error"><input type="text" class="form-control" placeholder="请输入邮箱账号/手机号"></li>
-            <li class="form-group"><input type="password" class="form-control" placeholder="请输入密码"></li>
+            <li class="form-group has-error">{{ loginform.username }}</li>
+            <li class="form-group">{{ loginform.password }}</li>
           </ul>
           <p class="good-tips"><a href="#" data-toggle="modal" data-target="#forgetpswModal" id="btnForgetpsw" class="fr">忘记密码？</a>还没有账号？<a href="" data-toggle="modal" data-target="#registerModal" id="btnRegister">立即注册</a></p>
           <div>
-            <button type="button" class="btn btn-micv5 btn-block">登录</button>
+            <button id="logbutton" type="submit" class="btn btn-micv5 btn-block">登录</button>
           </div>
-          <div class="tips-error bg-danger">错误提示</div>
+          <input type="hidden" name="lgsource_url" id="lg_source_url" value="{{ request.META.HTTP_REFERER }}">
+
+          <div class="tips-error bg-danger" id="logerror"></div>
+          </form>
         </section>
       </div>
     </div>
@@ -187,6 +175,7 @@
         <h4 class="modal-title" id="registerModalLabel">注册</h4>
       </div>
       <div class="modal-body">
+      
         <section class="box-register v5-input-txt" id="box-register">
           <ul class="register-tabs" role="tablist">
             <li class="active"><a href="#register-email" role="tab" data-toggle="tab">邮箱注册</a></li>
@@ -194,22 +183,32 @@
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="register-email">
-            	<div class="form-group"><input type="text" class="form-control" placeholder="请输入邮箱账号"></div>
-              <div class="form-group"><input type="password" class="form-control" placeholder="请输入密码"></div>
-              <div class="form-group cf"><input type="text" class="form-control form-control-captcha fl" placeholder="请输入验证码"><span class="v5-yzm fr"><a href=""><img src="test/yzm.jpg">换一张</a></span></div>            	
+            <form  action="" method='post' id='formreg' autocomplete="off">
+            {% csrf_token %}
+            	<div class="form-group">{{ regform.email }}</div>
+              <div class="form-group">{{ regform.password }}</div>
+              <div class="form-group cf">{{ regform.yanzhengma }}<span class="v5-yzm fr" id="yzma"><img id="yzmimg" src="{% static 'test/yzm1.jpeg' %}"/>换一张</span></div>
+               <p class="good-tips">已经有账号？<a href="" data-toggle="modal" data-target="#loginModal" id="btnLogin">立即登录</a></p>
+              <div>
+              <input type="hidden" name="source_url" id="id_source_url" value="{{ request.META.HTTP_REFERER }}">
+            <button type="submit" id="regbutton" class="btn btn-micv5 btn-block">注册并登录</button>
+          </div>
+              <div class="tips-error bg-danger" id="regerror" ></div>
+              </form>
             </div>
+            </form>
             <div class="tab-pane" id="register-mobile">
             	<div class="form-group cf"><input type="text" class="form-control form-control-phone fl" placeholder="请输入手机号"><span class="fr"><button type="button" class="btn btn-micv5 btn-send">发送验证码</button></span></div>
               <div class="form-group"><input type="text" class="form-control" placeholder="请输入短信验证码"></div>
               <div class="form-group"><input type="password" class="form-control" placeholder="请输入密码"></div>
-              <div class="form-group cf"><input type="text" class="form-control form-control-captcha fl" placeholder="请输入验证码"><span class="v5-yzm fr"><a href=""><img src="test/yzm.jpg">换一张</a></span></div>
-            </div>
-          </div>
+              <div class="form-group cf"><input type="text" class="form-control form-control-captcha fl" placeholder="请输入验证码"><span class="v5-yzm fr"><a href="" ><img src="{% static 'test/yzm.jpg' %}">换一张</a></span></div>
           <p class="good-tips">已经有账号？<a href="#" data-toggle="modal" data-target="#loginModal" id="btnLogin">立即登录</a></p>
           <div>
-            <button type="button" class="btn btn-micv5 btn-block">注册并登录</button>
+            <button type="submit" class="btn btn-micv5 btn-block">注册并登录</button>
+            <!-- <input type="submit" class="btn btn-micv5 btn-block"></input> -->
           </div>
           <div class="tips-error bg-danger">错误提示</div>
+            </div>
         </section>
       </div>
     </div>
@@ -217,23 +216,26 @@
 </div>
 
 <!--登陆后-->
+{% if request.user.is_authenticated %}
 <div class="show-card animated hidden">
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td class="td-userhd"><span class="user-pic"><img src="test/15.jpg"></span></td>
+      <td class="td-userhd"><span class="user-pic"><img src="/uploads/{{ request.user.avatar_url }}"></span></td>
       <td align="right" class="text-align-r">
-        <a href="" class="link-default">184545848</a>
-        <div class="user-email">184545848@mail.com</div>
+        <a href="" class="link-default">{{ request.user.username }}</a>
+        <div class="user-email">{{ request.user.email }}</div>
+         <input type="hidden" name="source_sid" value="{{ request.user.id }}">
       </td>
     </tr>
     <tr>
-      <td colspan="2"><a href="" class="btn btn-micv5 btn-md btn-block">进入个人中心</a></td>
+      <td colspan="2"><a href="{% url 'maizi:grs' %}" class="btn btn-micv5 btn-md btn-block">进入个人中心</a></td>
     </tr>
     <tr>
-      <td colspan="2"><a href="" class="link-cancel">注销</a></td>
+      <td colspan="2"><a href="{% url 'maizi:do_logout' %}" class="link-cancel">注销</a></td>
     </tr>
   </table>
 </div>
+{% endif %}
 
 <!--意见反馈-->
 <div class="feedback">
@@ -251,6 +253,7 @@
 </div>
 
 <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-1.12.4.js' %}"></script>
 <script src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
 <script src="{% static 'js/jquery.featureCarousel.min.js' %}"></script>
 <script src="{% static 'js/jquery.carouFredSel.js' %}"></script>
@@ -260,6 +263,136 @@
 <script src="{% static 'js/jquery.jscrollpane.min.js' %}"></script>
 <script src="{% static 'js/microoh-v5.js' %}"></script>
 <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+<script src="{% static 'js/jquery.pagination.js' %}"></script>
+
+<script type="text/javascript">       
+                 
+  var timeoutid = null; 
+  var ajax_request = function(){
+    $.ajax({
+      'url':{% url 'maizi:seo' %},
+      'data':{'search':$('#search').val()},
+      'dataType':'json',
+      'type':'POST',
+      'success':function(data){
+        if(data.length == 0){
+          $('#keyword-group').slideUp();
+        }
+        else if(data.length) {
+          $('#autocomplete1').empty(); 
+          $('#autocomplete2').empty(); 
+          json_str = JSON.stringify(data)
+          json_data = JSON.parse(json_str)
+          $('#keyword-group').slideDown();
+          for (var i in json_data) {
+            if(json_data[i].vc){
+            for (var n in json_data[i].vc) {
+              var item = json_data[i].vc[n];
+               $('<a href="" style="background-color:#5DB836;"></a>').text(item.name).attr('href','/course/'+item.seo_keyword).appendTo($('#autocomplete1'))
+            }}
+            else{
+              for (var n in json_data[i].oc) {
+              var item = json_data[i].oc[n];
+               $('<a href="" style="background-color:#6A5ACD;"></a>').text(item.name).attr('href','/course/'+ item.url).appendTo($('#autocomplete2'))
+             }}
+           }}
+        }
+    });
+  };
+
+  $('#search') 
+  .keyup(function(event) { 
+    if(event.keyCode > 40 || event.keyCode == 8 || event.keyCode ==32) { 
+      clearTimeout(timeoutid); 
+      timeoutid = setTimeout(ajax_request,100);  
+    }
+  });
+  // 注册ajax
+  $('#regerror').hide()
+  $('#formreg').submit(function(){
+    var email = $('#id_email').val();
+    var password = $('#id_password').val();
+    var yanzhengma = $('#id_yanzhengma').val();
+    var source_url = $('#id_source_url').val();
+    $.ajax({
+      'type':"POST",
+      'data':{email:email,password:password,yanzhengma:yanzhengma,source_url:source_url},
+      'url':{% url 'maizi:do_reg' %},
+      'dataType':'html',
+      success:function(result,status,xml){
+        $('#regerror').show();
+        $('#regerror').text(result);
+        if (result.match(/http:\/\/.+/) != null){
+          $('#regerror').show();
+          $('#regerror').text('页面跳转中.......'); 
+          $("input[name='email']").val("").focus();
+          $("input[name='password']").val("").focus();
+          $("input[name='yanzhengma']").val("").focus();
+          location.href = window.location.href}
+      },
+      error:function(){
+        $('#regerror').show();
+        $('#regerror').text('Error!!!!!!');
+      }
+    });
+    return false;
+    // return True;
+  });
+  //登录ajax
+  $('#logerror').hide()
+  $('#formlog').submit(function(){
+    var username = $('#id_username').val();
+    var password = $('#id_password').val();
+    var lgsource_url = $('#lg_source_url').val();
+    $.ajax({
+      'type':"POST",
+      'data':{username:username,password:password,lgsource_url:lgsource_url},
+      'url':{% url 'maizi:do_login' %},
+      'dataType':'html',
+      success:function(data,status,xml){
+        $('#logerror').show();
+        $('#logerror').text(data);
+        if (data.match(/http:\/\/.+/) != null){
+          $('#logerror').show();
+          $('#logerror').text('页面跳转中.......'); 
+          $("input[name='username']").val("").focus();
+          $("input[name='password']").val("").focus();
+          location.href = window.location.href}
+      },
+      error:function(){
+        $('#logerror').show();
+        $('#logerror').text('Error!!!!!!');
+      }
+    });
+    return false;
+  });
+
+  //搜索
+  $('#seo_search').submit(function(){
+    var oc_search = $('#search').val();
+    $.ajax({
+      'type':"POST",
+      'data':{oc_search:oc_search},
+      'url':{% url 'maizi:seo' %},
+      'dataType':'html',
+      success:function(data){
+        location.href = '/search/' + oc_search
+
+      }
+    })
+  });
+
+  $('#yzma').click(function(){
+    alert($('#yzmimg'));
+    // location.href = '/search/course/python'
+    // $('#yzmimg').src = "D:\Users\linky\Desktop\maizi-project\maizi_website\maizi\common\yzm2.jpg";
+    // yzmimg.src="{% static 'test/yzm2.jpg' %}";
+
+  });
+
+
+</script>
+
 <script type="text/javascript">
 $(function() {
 	//大图切换

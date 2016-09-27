@@ -1,0 +1,53 @@
+{% extends 'common/base.html' %}
+{% load staticfiles %}
+
+{% block title %}{{ TITLE }}{% endblock %}
+{% block keywords%}{{ KEYWORDS}}{% endblock %}
+{% block description%}{{ DESCRIPTION }}{% endblock %}
+{% block custom_css %}
+<link href="{% static 'css/zy.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block custom_script %}
+
+{% endblock %}
+
+{% block container %}
+<div class="vteacher-banner-big">
+    <div class="container">
+      <div class="carousel-container">
+        <div id="carousels">
+          <div class="carousel-teacher">
+            <div class='teacher-jx'>
+            <ol>
+            <li style="font-size:40px"><strong>{{ vocationalcourse.name }}</strong></li>
+            <br>
+            <li><p>{{ vocationalcourse.description }}</p></li>
+            <br>
+            <br>
+            <div class="row_2">
+            {% if request.user.is_authenticated %}
+              {% if vo %}
+               <strong><span>你已报名，正在学习中...</span></strong>
+              {% else %}
+              <button><a class="try_learn" href="">免费试学</a></button>
+              <button><a class="just_up" href="{% url 'maizi:baoming' vocationalcourse.id %}">立即报名</a></button>
+              {% endif %}
+            {% else %}
+            <button><a class="try_learn" href="">免费试学</a></button>
+             <button><a class="just_up" href="" data-toggle="modal" data-target="#loginModal">立即报名</a></button>
+             {% endif %}
+            </div>
+            </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div>
+
+</div>
+<ul id='foo'></ul>
+{% endblock %}
+

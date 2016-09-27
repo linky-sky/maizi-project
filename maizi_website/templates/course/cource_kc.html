@@ -1,0 +1,81 @@
+{% extends 'common/base.html' %}
+{% load staticfiles %}
+{% load maizi_filter %}
+{% block title %}{{ TITLE }}{% endblock %}
+{% block keywords%}{{ KEYWORDS}}{% endblock %}
+{% block description%}{{ DESCRIPTION }}{% endblock %}
+{% block custom_css %}
+<!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> -->
+<link href="{% static 'css/lessonVideoList.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block custom_script %}
+
+<script type="text/javascript" src="{% static 'js/lessonVideoList.js' %}"></script>
+{% endblock %}
+
+{% block container %}
+<div class="indexNav color99 font14 center">
+    <a href="{% url  'maizi:index' %}">首页</a> &gt; <a href="http://www.maiziedu.com/course/list/">课程库</a> &gt; {{ othercourse.name }}
+</div>
+<div class="video-lists-container vlesson-info">
+    <div class="fl vlesson-infoL">
+        <i class="VLCico"></i>
+        <i class="VLCico status_end"></i>
+        <img src="/uploads/{{ othercourse.image }}">
+    </div>
+    <div class="fl vlesson-infoR">
+        <h1 class="color33 font24 marginB10">{{ othercourse.name }}</h1>
+        <p class="color66 font14 marginB10 p2">{{ othercourse.description }}</p>
+        <p class="lv_tag marginB20"></p>
+        <p class="color66 font14 lv_tag2 marginB20"><span><i class="VLCico icolist"></i>{{ othercourse.lesson_set.all.count }} 章节</span>|<span><i class="VLCico icopeople"></i>{{ othercourse.click_count }}次播放</span></p>
+        <p class="lv_btn"><a href="{% url 'maizi:play' othercourse.id zjid %}" class="a1 font14">查看课程视频</a>
+    </p></div>
+</div>
+<div class="video-lists-container marginB40">
+    <div class="VLCleft">
+        <ul class="tab_menu font16 color66">
+            <li class="active"><span>课程目录</span></li>
+            <li><span>Wiki资料</span></li>
+            <li><span>相关文章</span></li>
+            <li><span>课件下载</span></li>
+        </ul>
+        <div class="tab_box">
+            <div>
+                <div class="lesson-time">
+                    <div class="fl font14 color66"><i class="VLCico"></i>{{ video_time }} 小时学习时长</div>   
+                </div>
+                {% if othercourse.lesson_set.all %}
+                <ul class="lesson-lists">
+                    {% for othercours in othercourse.lesson_set.all %}
+                    <li><a href="{% url  'maizi:play' othercourse.id othercours.id %}" target="_blank" class="font14 color66"><span class="fl">{{ othercours.name }}</span><span class="fr color99">{{ othercours.video_length|time }}</span></a></li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                   <ul class="lesson-lists">
+                    <li><span class="fl">很抱歉，暂时没有章节。</span><span class="fr color99"></span></li>
+                </ul>
+                {% endif %}
+            </div>
+            <div>
+                <ul class="wiki_lists">
+                </ul>
+                <div class="no_data font20 colore3">暂无相关内容~</div>
+            </div>
+            <div>
+                <ul class="article_lists">
+                </ul>
+                <div class="no_data font20 colore3">暂无相关内容~</div>
+            
+            </div>
+            <div>
+                <ul class="lesson_download">
+                </ul>
+                <div class="no_data font20 colore3">暂无相关内容~</div>
+            </div>
+        </div>
+    </div>
+</div>
+<ul id='foo'></ul>
+{% endblock %}
+

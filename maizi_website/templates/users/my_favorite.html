@@ -1,0 +1,64 @@
+{% extends "common/base.html" %}
+{% load staticfiles %}
+{% block title %}{{ TITLE }}{% endblock %}
+{% block keywords%}{{ KEYWORDS}}{% endblock %}
+{% block description%}{{ DESCRIPTION }}{% endblock %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/personalCenter.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/layer.css'">
+<script src="{% static 'js/PCASClass.js' %}"></script>
+{% endblock %}
+
+
+
+{% block container %}
+<div class="container-fluid container-banner">
+    <div class="container container-uinfo">
+      <div class="header-uinfo">
+        <div class="uinfo-head"><img src="/uploads/{{ student.avatar_url }}"></div>
+        <div class="uinfo-con">
+          <div class="user-name cf">
+            <span>{{ student.username }}</span>
+             {% if vc %}
+            <img src="{% static 'images/vip.png' %}" id="viptips" data-toggle="tooltip" data-placement="top" data-container="body" title="VIP有效期至 2014/12/12">
+            <!-- <img src="{% static 'images/android.png' %}"> -->
+            {% endif %}
+          </div>
+          <div class="course-info">
+            <!-- <span>学习：小时</span> -->
+            <span>上课：{{ vc|length }} 门</span>
+          </div>
+        </div>
+      </div>
+      <div class="uc-nav">
+        <ul>
+          <li><a href="{% url 'maizi:my_course' %}">我的课程</a></li>
+          <li><a href="">我的收藏</a></li>
+          <li><a href="">我的证书</a></li>
+          <li><a href="">我的消息</a><span class="msg-tips"></span></li>
+          <li class="active"><a href="{% url 'maizi:grs' %}">个人资料</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="uc-boxa">
+        <div class="uc-h1">我的收藏</div>
+    <div class="row other-course">
+    {% for f in fa%}
+      <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="lead-img"><img src="/uploads/{{ f.course.image }}"><a href="{% url 'maizi:course_kc' f.course.id %}" class="opt">继续学习</a></div>
+        <div class="artc-bt">
+          <h3><a href="" title="{{ f.course }}">{{ f.course }}</a></h3>
+          <!-- <p>已观看到第三章</p> -->
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+

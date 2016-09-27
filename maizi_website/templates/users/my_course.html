@@ -1,0 +1,78 @@
+{% extends "common/base.html" %}
+{% load staticfiles %}
+{% block title %}{{ TITLE }}{% endblock %}
+{% block keywords%}{{ KEYWORDS}}{% endblock %}
+{% block description%}{{ DESCRIPTION }}{% endblock %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/personalCenter.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/layer.css'">
+<script src="{% static 'js/PCASClass.js' %}"></script>
+{% endblock %}
+
+
+
+{% block container %}
+<div class="container-fluid container-banner">
+    <div class="container container-uinfo">
+      <div class="header-uinfo">
+        <div class="uinfo-head"><img src="/uploads/{{ student.avatar_url }}"></div>
+        <div class="uinfo-con">
+          <div class="user-name cf">
+            <span>{{ student.username }}</span>
+             {% if vc %}
+            <img src="{% static 'images/vip.png' %}" id="viptips" data-toggle="tooltip" data-placement="top" data-container="body" title="VIP有效期至 2014/12/12">
+            <!-- <img src="{% static 'images/android.png' %}"> -->
+            {% endif %}
+          </div>
+          <div class="course-info">
+            <!-- <span>学习：小时</span> -->
+            <span>上课：{{ vc|length }} 门</span>
+          </div>
+        </div>
+      </div>
+      <div class="uc-nav">
+        <ul>
+          <li><a href="{% url 'maizi:my_course' %}">我的课程</a></li>
+          <li><a href="{% url 'maizi:my_favorite' %}">我的收藏</a></li>
+          <li><a href="">我的证书</a></li>
+          <li><a href="">我的消息</a><span class="msg-tips"></span></li>
+          <li class="active"><a href="{% url 'maizi:grs' %}">个人资料</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="uc-boxa">
+    <div class="uc-h1">基本资料</div><a href="http://www.maiziedu.com/user/invitation/link/" class="pcprize"><i></i>推荐有奖</a></p>
+        <ul class="pCcourseList">
+              {% for my in vc %}
+                <li>
+                    <div class="img">
+                        <a href="http://www.maiziedu.com/lps3/student/class/202/">
+                        <img src="/uploads/{{ my.image }}" alt="Python Web开发"></a>
+                    </div>
+                    <div class="font color99 font14">
+                        <p class="p marginB20">
+                            <a href="http://www.maiziedu.com/lps3/student/class/202/">
+                            <span class="color33 font20">{{ my.name }}</span>
+                            </a>
+                        </p>
+                        <dl>
+                            <dd>状态<br><span class="font18 color33">学习中</span></dd>
+                            <!-- <dd>毕业倒计时<br><span class="font18 color33">33天</span></dd> -->
+                        </dl>
+                    </div>
+                    <div class="fl describe">
+<!--                         <p class="color99 font12">学习到</p>
+                        <p class="color66 font14 marginB16">仿麦子官网视频网站</p> -->
+                        <p><a class="pbtn" href="http://www.maiziedu.com/lps3/student/task/202_114/">继续学习</a></p>
+                    </div>
+                </li>
+                {% endfor %}
+        </ul>
+</div>
+
+{% endblock %}
+
+
+
+
