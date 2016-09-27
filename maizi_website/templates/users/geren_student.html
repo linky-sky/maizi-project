@@ -19,7 +19,7 @@
         <div class="uinfo-con">
           <div class="user-name cf">
             <span>{{ student.username }}</span>
-            {% if vc%}
+            {% if vc %}
             <img src="{% static 'images/vip.png' %}" id="viptips" data-toggle="tooltip" data-placement="top" data-container="body" title="VIP有效期至 2014/12/12">
             <!-- <img src="{% static 'images/android.png' %}"> -->
             {% endif %}
@@ -33,9 +33,9 @@
       <div class="uc-nav">
         <ul>
           <li><a href="{% url 'maizi:my_course' %}">我的课程</a></li>
-          <li><a href="个人中心-我的收藏(学生).html">我的收藏</a></li>
-          <li><a href="个人中心-我的证书(学生).html">我的证书</a></li>
-          <li><a href="个人中心-我的消息(学生).html">我的消息</a><span class="msg-tips">1</span></li>
+          <li><a href="{% url 'maizi:my_favorite' %}">我的收藏</a></li>
+          <li><a href="">我的证书</a></li>
+          <li><a href="">我的消息</a><span class="msg-tips"></span></li>
           <li class="active"><a href="{% url 'maizi:grs' %}">个人资料</a></li>
         </ul>
       </div>

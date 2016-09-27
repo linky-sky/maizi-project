@@ -11,7 +11,6 @@ from django.shortcuts import render,get_object_or_404,redirect
 from django.http import HttpResponse,HttpResponseRedirect,Http404
 from django.conf import settings
 from common.models import *
-from common.models import Ads,RecommendedSearchkeywords
 import logging
 from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -67,3 +66,13 @@ def my_course(request):
 		student = get_object_or_404(UserProfile,pk=u_id)
 		vc = [ VocationalCourses.objects.get(id=y.course)  for y in  student.mc_user.all()]
 	return render(request,'users/my_course.html',locals())
+
+
+#用户后台我的收藏
+@login_required
+def my_favorite(request):
+	if request.user.id:
+		u_id = request.user.id
+		student = get_object_or_404(UserProfile,pk=u_id)
+		fa = student.mf_user.all()
+	return render(request,'users/my_favorite.html',locals())

@@ -21,4 +21,5 @@ from common.upload  import upload_image
 urlpatterns = [
     url(r'^base/',views.geren_student,name='grs'),
     url(r'^course/',views.my_course,name='my_course'),
+    url(r'^favorite/',views.my_favorite,name='my_favorite'),
 ]

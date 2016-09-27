@@ -33,7 +33,7 @@
       <div class="uc-nav">
         <ul>
           <li><a href="{% url 'maizi:my_course' %}">我的课程</a></li>
-          <li><a href="{% url 'maizi:my_favorite' %}">我的收藏</a></li>
+          <li><a href="">我的收藏</a></li>
           <li><a href="">我的证书</a></li>
           <li><a href="">我的消息</a><span class="msg-tips"></span></li>
           <li class="active"><a href="{% url 'maizi:grs' %}">个人资料</a></li>
@@ -42,33 +42,19 @@
     </div>
   </div>
     <div class="uc-boxa">
-    <div class="uc-h1">基本资料</div><a href="http://www.maiziedu.com/user/invitation/link/" class="pcprize"><i></i>推荐有奖</a></p>
-        <ul class="pCcourseList">
-              {% for my in vc %}
-                <li>
-                    <div class="img">
-                        <a href="http://www.maiziedu.com/lps3/student/class/202/">
-                        <img src="/uploads/{{ my.image }}" alt="Python Web开发"></a>
-                    </div>
-                    <div class="font color99 font14">
-                        <p class="p marginB20">
-                            <a href="http://www.maiziedu.com/lps3/student/class/202/">
-                            <span class="color33 font20">{{ my.name }}</span>
-                            </a>
-                        </p>
-                        <dl>
-                            <dd>状态<br><span class="font18 color33">学习中</span></dd>
-                            <!-- <dd>毕业倒计时<br><span class="font18 color33">33天</span></dd> -->
-                        </dl>
-                    </div>
-                    <div class="fl describe">
-<!--                         <p class="color99 font12">学习到</p>
-                        <p class="color66 font14 marginB16">仿麦子官网视频网站</p> -->
-                        <p><a class="pbtn" href="http://www.maiziedu.com/lps3/student/task/202_114/">继续学习</a></p>
-                    </div>
-                </li>
-                {% endfor %}
-        </ul>
+        <div class="uc-h1">我的收藏</div>
+    <div class="row other-course">
+    {% for f in fa%}
+      <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="lead-img"><img src="/uploads/{{ f.course.image }}"><a href="{% url 'maizi:course_kc' f.course.id %}" class="opt">继续学习</a></div>
+        <div class="artc-bt">
+          <h3><a href="" title="{{ f.course }}">{{ f.course }}</a></h3>
+          <!-- <p>已观看到第三章</p> -->
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 {% endblock %}
